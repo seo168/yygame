@@ -1,13 +1,12 @@
 {
-  "name": "YYGAME",
-  "short_name": "YYGAME",
-  "start_url": "/yygame/",
-  "scope": "/yygame/",
+  "name": "yygame",
+  "short_name": "yygame",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0b0a0e",
   "theme_color": "#b31c18",
   "icons": [
-    { "src": "/yygame/assets/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/yygame/assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+    {"src": "/assets/apple-touch-icon.png","sizes": "180x180","type": "image/png"},
+    {"src": "/assets/favicon.svg","sizes": "any","type": "image/svg+xml"}
   ]
 }
