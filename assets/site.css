@@ -1,0 +1,45 @@
+:root{
+  --bg:#0b0a0e;--bg2:#120f16;--card:#171017;--muted:#cfc6c9;--text:#fff8fb;
+  --gold:#f6c453;--gold-2:#ffd98a;--border:#3b1a1f;--accent:#d33a32;
+  --radius:18px;--radius-lg:26px;
+}
+
+*{box-sizing:border-box}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold-2)}
+
+.container{max-width:1200px;margin:0 auto;padding:22px}
+
+/* Header (shared) */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+  background:linear-gradient(180deg,rgba(10,8,12,.8),rgba(10,8,12,.45));border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:36px;height:36px;border-radius:12px;border:1px solid rgba(246,196,83,.55)}
+.brand b{font-size:18px;letter-spacing:.2px}
+.menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
+  border:1px solid var(--border);background:#140f15;color:var(--text);font-weight:700}
+.btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
+.btn.ghost{background:transparent}
+.menu-toggle{display:none}
+
+/* Sub-nav (tabs) */
+.subnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(12,9,13,.4)}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.tab{padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:#140f15;color:var(--text)}
+.tab[aria-current="page"]{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
+.active{outline:2px solid rgba(246,196,83,.35);outline-offset:2px;border-color:#6a4b2a}
+
+/* Breadcrumb */
+.crumbs{font-size:14px;margin-top:8px}
+.crumbs a{color:var(--gold-2)}
+
+/* Mobile */
+@media (max-width:900px){
+  .container{padding:16px}
+  .menu-toggle{display:inline-flex;background:#151017;border:1px solid var(--border);color:var(--gold);padding:10px 12px;border-radius:12px}
+  .menu{display:none;position:absolute;right:16px;top:58px;flex-direction:column;background:#120c10;border:1px solid var(--border);border-radius:12px;padding:10px;min-width:220px;z-index:30}
+  .menu.open{display:flex}
+  .nav a.btn{width:100%;justify-content:center}
+}
