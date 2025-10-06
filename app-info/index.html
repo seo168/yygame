@@ -27,3 +27,70 @@
     body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
     a{color:var(--gold);text-decoration:none}
     .container{max-width:960px;margin:0 auto;padding:22px}
+    h1{font-size:clamp(28px,5vw,42px);margin:8px 0}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{background:linear-gradient(180deg,#1b1117,rgba(27,17,23,.7));border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#ffd98a,#f6c453);color:#2f1f08;font-weight:800}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+
+  <!-- BreadcrumbList (helps context in SERP) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://yygame-in.com/"},
+      {"@type":"ListItem","position":2,"name":"App Info","item":"https://yygame-in.com/app-info/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <main class="container">
+    <h1>YY Game — App Info</h1>
+    <p class="muted">Official details for <strong>yygame (YY Game)</strong> in India: version, APK size, supported Android, and core features.</p>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Version & Size</h2>
+        <ul class="muted">
+          <li><strong>Version:</strong> 1.0.0</li>
+          <li><strong>File size:</strong> ~40 MB</li>
+          <li><strong>Package:</strong> Android APK</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Android Requirements</h2>
+        <ul class="muted">
+          <li>Android 8.0 (Oreo) or newer recommended</li>
+          <li>Storage space ≥ 150 MB free</li>
+          <li>Stable internet connection</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <h2>Key Features</h2>
+      <ul class="muted">
+        <li>UPI/IMPS deposits and fast INR withdrawals</li>
+        <li>Optimized for mainstream Android devices</li>
+        <li>Popular high-RTP titles, events, and missions</li>
+      </ul>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <h2>Get the APK</h2>
+      <p class="muted">Need the installation file?</p>
+      <p><a class="btn" href="../apk/" aria-label="Go to YY Game APK page">⬇️ Download YY Game APK</a></p>
+      <p class="muted">First time installing? Read the <a href="../how-to-download/">Install Guide</a>.</p>
+    </section>
+
+    <section class="card" style="margin-top:14px">
+      <h2>Safety & Responsibility</h2>
+      <p class="muted">18+ only. Availability depends on local/state laws in India. Play responsibly.</p>
+    </section>
+  </main>
+</body>
+</html>
