@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yygame.com/sitemap.xml
+Sitemap: https://yygame-in.com/sitemap.xml
