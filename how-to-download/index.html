@@ -2,60 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
   <title>How to Download & Install YY Game APK — yygame (India)</title>
-  <meta name="description" content="Step-by-step guide to download and install the YY Game APK on Android for India. Enable unknown sources, open the file, and finish installation.">
-  <link rel="canonical" href="https://yygame-in.com/how-to-download/">
+  <meta name="description" content="Step-by-step guide to download and install the YY Game APK on Android for India.">
+  <link rel="canonical" href="https://yygame-in.com/how-to-download/"/>
 
-  <link rel="icon" href="../favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180">
+  <meta name="theme-color" content="#b31c18"/>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
 
-  <link rel="stylesheet" href="../assets/site.css">
-  <meta name="site-root" content="../">
+  <style>
+    :root{
+      --bg:#0b0a0e;--bg2:#120f16;--card:#171017;--muted:#d3c6c9;--text:#fff8fb;
+      --red:#d33a32;--red-2:#b3211c;--gold:#f6c453;--gold-2:#ffd98a;--ring:#3a0e12;--border:#3b1a1f;
+      --radius:16px;--radius-lg:22px;--shadow:0 14px 36px rgba(0,0,0,.65), 0 0 40px rgba(179,33,28,.18);
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(211,58,50,.18),transparent 60%),
+        radial-gradient(900px 500px at 95% 10%, rgba(246,196,83,.14),transparent 55%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;
+    }
+    a{color:var(--gold)} a:hover{color:var(--gold-2)}
+    .container{max-width:1120px;margin:0 auto;padding:20px}
+
+    /* HEADER — sama dengan root */
+    header{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+      background:linear-gradient(180deg,rgba(10,8,12,.85),rgba(10,8,12,.55));border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .brand .logo{width:34px;height:34px;border-radius:12px;object-fit:cover;border:1px solid rgba(246,196,83,.65);box-shadow:0 0 22px rgba(246,196,83,.22)}
+    .brand span{font-size:18px}
+    .menu-toggle{display:none;background:#151017;border:1px solid var(--border);color:var(--gold);padding:10px 12px;border-radius:12px;font-size:18px;line-height:1}
+    .menu{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:12px;border:1px solid var(--border);background:#140f15;color:var(--text);font-weight:700;box-shadow:0 2px 0 rgba(0,0,0,.35) inset}
+    .btn:hover{border-color:#61323a}
+    .btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));border-color:#e0b04a;color:#2f1f08;text-shadow:0 1px 0 rgba(255,255,255,.35)}
+    .btn.primary:hover{filter:brightness(1.03)}
+    .btn.ghost{background:transparent}
+
+    .section{padding:28px 0}
+    .card{background:linear-gradient(180deg,#1b1117,rgba(27,17,23,.7));border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+    .muted{color:var(--muted)}
+
+    @media (max-width:900px){
+      .container{padding:16px}
+      .menu-toggle{display:inline-flex}
+      .nav{position:relative}
+      .menu{display:none;position:absolute;right:16px;top:58px;flex-direction:column;gap:8px;background:#120c10;border:1px solid var(--border);border-radius:12px;padding:10px;min-width:180px;z-index:30}
+      .menu.open{display:flex}
+      .nav a.btn{width:100%;justify-content:center}
+    }
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
 </head>
-<body data-page="install" style="background:linear-gradient(180deg,#0b0a0e,#120f16);color:#fff8fb;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65">
-  <div id="site-header"></div>
+<body>
+  <header aria-label="Main navigation">
+    <div class="container nav">
+      <div class="brand">
+        <img class="logo" src="/assets/logo.webp" alt="yygame logo" width="34" height="34"/>
+        <span>yygame</span>
+      </div>
+
+      <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">☰</button>
+
+      <nav id="site-menu" class="menu" aria-label="Primary">
+        <a class="btn" href="/app-info/">App Info</a>
+        <a class="btn primary" href="/how-to-download/">How to Download</a>
+        <a class="btn" href="/apk/">Download YY Game APK</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a> › <span>How to Install</span></nav>
-
-    <section style="padding:28px 0 8px">
-      <h1 style="font-size:clamp(28px,5vw,42px);margin:8px 0">How to Download & Install YY Game APK</h1>
-      <p class="muted">Follow the steps below to download and install the latest <strong>YY Game APK</strong> on Android.</p>
+    <section class="section">
+      <h1>How to Download & Install YY Game APK</h1>
+      <p class="muted">Follow these steps to install the latest <strong>YY Game APK</strong> safely on Android.</p>
     </section>
 
-    <section class="card">
+    <section class="section card">
       <h2>Prerequisites</h2>
       <ul class="muted">
-        <li>Android 8.0 or newer recommended</li>
+        <li>Android 8.0 or newer</li>
         <li>Free storage ≥ 150 MB</li>
         <li>Stable internet connection</li>
       </ul>
     </section>
 
-    <section class="card">
+    <section class="section card">
       <h2>Step-by-step</h2>
       <ol class="muted">
-        <li>Open the <a href="../apk/">YY Game APK</a> page and tap <strong>Download</strong>.</li>
-        <li>When prompted, allow <em>Install unknown apps</em> for your browser or file manager.</li>
-        <li>Open the downloaded APK (see Downloads) and follow on-screen instructions.</li>
-        <li>Launch the app from your home screen.</li>
+        <li>Open the <a href="/apk/">YY Game APK</a> page and tap <strong>Download</strong>.</li>
+        <li>Allow <em>Install unknown apps</em> for your browser/file manager.</li>
+        <li>Open the downloaded APK and follow on-screen instructions.</li>
       </ol>
-      <p class="muted">Need app details? See <a href="../app-info/">App Info & Requirements</a>.</p>
-    </section>
-
-    <section class="card">
-      <h2>Troubleshooting</h2>
-      <ul class="muted">
-        <li><strong>Blocked by browser:</strong> Choose <em>Keep</em> / <em>Download anyway</em> if you trust our official source.</li>
-        <li><strong>Install button greyed out:</strong> Disable overlays (e.g., screen filters), then retry.</li>
-        <li><strong>Parse error:</strong> Re-download the APK; ensure your Android version meets minimum requirements.</li>
-      </ul>
     </section>
   </main>
 
-  <script src="../assets/header.js" defer></script>
+  <footer>
+    <div class="container" style="border-top:1px solid var(--border);margin-top:32px;color:var(--muted);padding:18px 0">
+      <span>© <span id="y"></span> yygame. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const btn = document.querySelector('.menu-toggle');
+    const menu = document.getElementById('site-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  </script>
 </body>
 </html>
