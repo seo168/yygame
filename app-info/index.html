@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
   <title>YY Game — App Info & Requirements (yygame Official)</title>
   <meta name="description" content="YY Game app details for India: version, size, Android requirements, features, and support. Download YY Game APK from the official yygame site.">
@@ -17,40 +17,97 @@
   <meta property="og:image" content="https://yygame-in.com/assets/hero.webp">
   <meta name="twitter:card" content="summary_large_image">
 
+  <!-- Brand / icons -->
+  <meta name="theme-color" content="#b31c18"/>
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
   <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180">
 
   <style>
-    :root{--bg:#0b0a0e;--bg2:#120f16;--card:#171017;--muted:#cfc6c9;--text:#fff8fb;--gold:#f6c453;--border:#3b1a1f;--radius:18px}
-    *{box-sizing:border-box}
-    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
-    a{color:var(--gold);text-decoration:none}
-    .container{max-width:960px;margin:0 auto;padding:22px}
+    :root{--bg:#0b0a0e;--bg2:#120f16;--card:#171017;--muted:#cfc6c9;--text:#fff8fb;--gold:#f6c453;--gold-2:#ffd98a;--border:#3b1a1f;--radius:18px}
+    *{box-sizing:border-box}html,body{margin:0;padding:0;background:
+      radial-gradient(1200px 600px at 12% -8%, rgba(211,58,50,.16),transparent 60%),
+      radial-gradient(900px 500px at 92% 8%, rgba(246,196,83,.12),transparent 55%),
+      linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
+    a{color:var(--gold);text-decoration:none}a:hover{color:var(--gold-2)}
+    .container{max-width:1200px;margin:0 auto;padding:22px}
+
+    /* Shared header */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+      background:linear-gradient(180deg,rgba(10,8,12,.8),rgba(10,8,12,.45));border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:36px;height:36px;border-radius:12px;border:1px solid rgba(246,196,83,.55)}
+    .brand b{font-size:18px;letter-spacing:.2px}
+    .menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);background:#140f15;color:var(--text);font-weight:700}
+    .btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
+    .btn.ghost{background:transparent}
+    .menu-toggle{display:none}
+    .active{outline:2px solid rgba(246,196,83,.35);outline-offset:2px;border-color:#6a4b2a}
+
+    /* Secondary sub-nav */
+    .subnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(12,9,13,.4)}
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .tab{padding:10px 14px;border-radius:999px;border:1px solid var(--border);background:#140f15}
+    .tab[aria-current="page"]{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
+
+    /* Page */
+    .hero{padding:28px 0 8px}
     h1{font-size:clamp(28px,5vw,42px);margin:8px 0}
     .muted{color:var(--muted)}
     .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .card{background:linear-gradient(180deg,#1b1117,rgba(27,17,23,.7));border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#ffd98a,#f6c453);color:#2f1f08;font-weight:800}
-    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg,#1b1117,rgba(27,17,23,.7));border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-top:14px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.container{padding:16px}}
+
+    /* Breadcrumb */
+    .crumbs{font-size:14px;margin-top:8px}
+    .crumbs a{color:var(--gold-2)}
   </style>
 
-  <!-- BreadcrumbList (helps context in SERP) -->
+  <!-- Breadcrumb schema -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://yygame-in.com/"},
-      {"@type":"ListItem","position":2,"name":"App Info","item":"https://yygame-in.com/app-info/"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://yygame-in.com/"},
+    {"@type":"ListItem","position":2,"name":"App Info","item":"https://yygame-in.com/app-info/"}
+  ]}
   </script>
 </head>
 <body>
-  <main class="container">
-    <h1>YY Game — App Info</h1>
-    <p class="muted">Official details for <strong>yygame (YY Game)</strong> in India: version, APK size, supported Android, and core features.</p>
+  <a class="sr-only" href="#main">Skip to content</a>
+  <header aria-label="Site header">
+    <div class="container nav">
+      <div class="brand">
+        <a href="../"><img class="logo" src="../assets/logo.webp" alt="yygame logo" width="36" height="36"></a>
+        <b>yygame</b>
+      </div>
+      <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav id="site-menu" class="menu" aria-label="Primary">
+        <a class="btn" href="../apk/">Download YY Game APK</a>
+        <a class="btn" href="../how-to-download/">How to Install</a>
+        <a class="btn primary active" href="../app-info/" aria-current="page">App Info</a>
+        <a class="btn ghost" href="../">Home</a>
+      </nav>
+    </div>
+    <div class="subnav">
+      <div class="container tabs" role="navigation" aria-label="Section">
+        <a class="tab" href="../apk/">APK</a>
+        <a class="tab" href="../how-to-download/">Install Guide</a>
+        <a class="tab" href="../app-info/" aria-current="page">App Info</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../">Home</a> › <span>App Info</span>
+    </nav>
+
+    <section class="hero">
+      <h1>YY Game — App Info</h1>
+      <p class="muted">Official details for <strong>yygame (YY Game)</strong> in India: version, APK size, supported Android, and core features.</p>
+    </section>
 
     <section class="grid">
       <div class="card">
@@ -71,26 +128,20 @@
       </div>
     </section>
 
-    <section class="card" style="margin-top:14px">
+    <section class="card">
       <h2>Key Features</h2>
       <ul class="muted">
         <li>UPI/IMPS deposits and fast INR withdrawals</li>
         <li>Optimized for mainstream Android devices</li>
         <li>Popular high-RTP titles, events, and missions</li>
       </ul>
-    </section>
-
-    <section class="card" style="margin-top:14px">
-      <h2>Get the APK</h2>
-      <p class="muted">Need the installation file?</p>
-      <p><a class="btn" href="../apk/" aria-label="Go to YY Game APK page">⬇️ Download YY Game APK</a></p>
-      <p class="muted">First time installing? Read the <a href="../how-to-download/">Install Guide</a>.</p>
-    </section>
-
-    <section class="card" style="margin-top:14px">
-      <h2>Safety & Responsibility</h2>
-      <p class="muted">18+ only. Availability depends on local/state laws in India. Play responsibly.</p>
+      <p class="muted">Need the file? <a href="../apk/">Download YY Game APK</a> · Check the <a href="../how-to-download/">Install Guide</a>.</p>
     </section>
   </main>
+
+  <script>
+    const btn=document.querySelector('.menu-toggle'),menu=document.getElementById('site-menu');
+    if(btn&&menu){btn.addEventListener('click',()=>{const open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});}
+  </script>
 </body>
 </html>
