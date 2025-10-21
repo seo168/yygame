@@ -5,7 +5,7 @@
 }
 
 /* Smooth scroll global */
-html{scroll-behavior:smooth}
+html { scroll-padding-top: 72px; }
 
 *{box-sizing:border-box}
 a{color:var(--gold);text-decoration:none}
