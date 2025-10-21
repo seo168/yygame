@@ -471,8 +471,14 @@
 
   <script>
     // Year
-    document.addEventListener('DOMContentLoaded',()=>{ const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear(); });
-
+    document.addEventListener('DOMContentLoaded', function () {
+      const logo = document.getElementById('logoLink');
+      if (!logo) return;
+      logo.addEventListener('click', function (e) {
+      e.preventDefault();               // cegah loncat anchor default
+      window.scrollTo(0, 0);     
+    });
+   });
     // Menu
     (function(){
       const nav=document.querySelector('.nav');
