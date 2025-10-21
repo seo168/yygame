@@ -4,6 +4,9 @@
   --radius:18px;--radius-lg:26px;
 }
 
+/* Smooth scroll global */
+html{scroll-behavior:smooth}
+
 *{box-sizing:border-box}
 a{color:var(--gold);text-decoration:none}
 a:hover{color:var(--gold-2)}
@@ -11,17 +14,29 @@ a:hover{color:var(--gold-2)}
 .container{max-width:1200px;margin:0 auto;padding:22px}
 
 /* Header (shared) */
-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-  background:linear-gradient(180deg,rgba(10,8,12,.8),rgba(10,8,12,.45));border-bottom:1px solid var(--border)}
+header{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter:blur(10px);
+  background:linear-gradient(180deg,rgba(10,8,12,.8),rgba(10,8,12,.45));
+  border-bottom:1px solid var(--border)
+}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{display:flex;align-items:center;gap:12px}
 .logo{width:36px;height:36px;border-radius:12px;border:1px solid rgba(246,196,83,.55)}
 .brand b{font-size:18px;letter-spacing:.2px}
 .menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
-  border:1px solid var(--border);background:#140f15;color:var(--text);font-weight:700}
-.btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 18px;border-radius:12px;
+  border:1px solid var(--border);background:#140f15;color:var(--text);
+  font-weight:700
+}
+.btn.primary{
+  background:linear-gradient(180deg,var(--gold-2),var(--gold));
+  color:#2f1f08;border-color:#e0b04a
+}
 .btn.ghost{background:transparent}
+.btn:focus-visible{outline:3px solid rgba(246,196,83,.35);outline-offset:2px}
 .menu-toggle{display:none}
 
 /* Sub-nav (tabs) */
@@ -35,17 +50,30 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
 .crumbs{font-size:14px;margin-top:8px}
 .crumbs a{color:var(--gold-2)}
 
-/* Mobile */
+/* MOBILE */
 @media (max-width:900px){
   .container{padding:16px}
-  .menu-toggle{display:inline-flex;background:#151017;border:1px solid var(--border);color:var(--gold);padding:10px 12px;border-radius:12px}
-  .menu{display:none;position:absolute;right:16px;top:58px;flex-direction:column;background:#120c10;border:1px solid var(--border);border-radius:12px;padding:10px;min-width:220px;z-index:30}
+  .menu-toggle{
+    display:inline-flex;background:#151017;border:1px solid var(--border);
+    color:var(--gold);padding:10px 12px;border-radius:12px
+  }
+  .menu{
+    display:none;position:absolute;right:16px;top:58px;flex-direction:column;
+    background:#120c10;border:1px solid var(--border);border-radius:12px;
+    padding:10px;min-width:220px;z-index:30
+  }
   .menu.open{display:flex}
   .nav a.btn{width:100%;justify-content:center}
 }
 
-/* Hilangkan garis di section terakhir */
+/* Hilangkan garis di section terakhir (aman kalau .section ada border-b) */
 .section:last-of-type { border-bottom: 0; }
+
+/* ===== Anchor offset untuk bagian HOW (biar tidak ketutup header sticky) ===== */
+#how { scroll-margin-top: 80px; }
+@media (max-width: 640px){
+  #how { scroll-margin-top: 68px; }
+}
 
 /* Footer lebih rapi + jarak aman */
 .site-footer { 
@@ -54,6 +82,11 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
   background: linear-gradient(180deg,#151219,#0b0a0d);
   border-top: 1px solid rgba(212,175,55,.12);
 }
+
+/* Layout grid footer default */
+.fgrid{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+.fnav{display:flex;gap:10px;flex-wrap:wrap}
+.copy{color:#e7dac0}
 
 /* Mobile: footer jadi 1 kolom, tengah semua */
 @media (max-width: 640px){
@@ -96,4 +129,3 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
 /* Safe area biar nggak nempel gesture bar */
 main { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
 .site-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
-
