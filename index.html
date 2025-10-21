@@ -272,15 +272,19 @@
         <span class="brand-text">yygame</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <button id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
-        <ul id="navMenu">
-          <li><a href="#benefits">Benefits</a></li>
-          <li><a href="#promotions">Promotions</a></li>
-          <li><a href="#guides">Guides</a></li>
-          <li><a href="#updates">Updates</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li 
-            <a id="navDownload"href="https://yygame-apk.com"rel="nofollow"download>Download yygame APK</a>
+  <!-- If you no longer need a collapsible menu, you can remove this button -->
+        <button id="navToggle" aria-label="Open menu" aria-expanded="false" hidden>☰</button>
+
+  <!-- Single CTA only -->
+        <ul id="navMenu" style="display:flex;gap:8px;list-style:none;margin:0;padding:0">
+          <li>
+            <a id="navDownload"
+               class="btn primary"
+               href="https://yygame-apk.com"
+               rel="nofollow noopener"
+               aria-label="Download yygame APK">
+              Download yygame APK
+            </a>
           </li>
         </ul>
       </nav>
