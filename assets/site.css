@@ -43,3 +43,57 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
   .menu.open{display:flex}
   .nav a.btn{width:100%;justify-content:center}
 }
+
+/* Hilangkan garis di section terakhir */
+.section:last-of-type { border-bottom: 0; }
+
+/* Footer lebih rapi + jarak aman */
+.site-footer { 
+  margin-top: 16px;
+  padding: 24px 0 20px;
+  background: linear-gradient(180deg,#151219,#0b0a0d);
+  border-top: 1px solid rgba(212,175,55,.12);
+}
+
+/* Mobile: footer jadi 1 kolom, tengah semua */
+@media (max-width: 640px){
+  .site-footer .fgrid{
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    row-gap: 10px;
+  }
+  .fbrand{ margin-bottom: 2px; }
+  .fnav{
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 4px 0;
+  }
+  .copy{
+    margin: 6px 0 0 0;
+    line-height: 1.5;
+  }
+}
+
+/* Tombol di bar download jadi full-width di HP */
+@media (max-width: 720px){
+  .download .box{
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .download .box .btn{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Hindari teks/link kepanjangan pecah aneh */
+.fnav a, .copy { 
+  word-wrap: break-word; 
+  overflow-wrap: anywhere; 
+}
+
+/* Safe area biar nggak nempel gesture bar */
+main { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+.site-footer { padding-bottom: max(20px, env(safe-area-inset-bottom)); }
+
