@@ -1,215 +1,530 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 
-  <title>yygame (YY Game) — Official Site & APK Download (India)</title>
-  <meta name="description" content="Official yygame (YY Game) website for India. Download the latest YY Game APK, UPI deposits, fast withdrawals, high-RTP titles, and daily bonuses. 18+ only — play responsibly.">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <link rel="canonical" href="https://yygame-in.com/"/>
+  <title>yygame App (Official India) — Download yygame APK | yy game app Slot</title>
+  <meta name="description" content="Official yygame landing for India. Download the latest yygame APK safely. Fast slot experience, low data usage, UPI deposits, and secure updates for Indian networks. 18+ only — play responsibly.">
+  <meta name="keywords" content="yygame, yy game, yy game app, yygame apk, download yygame, slot India, YY Game APK, yygame India">
+  <link rel="canonical" href="https://yygame-in.com/">
 
-  <!-- Social -->
-  <meta property="og:site_name" content="yygame">
-  <meta property="og:title" content="yygame — Official Site & YY Game APK (India)">
-  <meta property="og:description" content="Download YY Game APK. UPI deposits, fast withdrawals, and high-RTP titles. 18+ only.">
+  <!-- Favicon & Touch Icon (tetap sama seperti domain yygame-in.com) -->
+  <link rel="icon" href="/favicon.ico?v=3" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png?v=3" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=3" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest?v=3">
+  <meta name="theme-color" content="#b31c18"/>
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yygame-in.com/">
-  <meta property="og:image" content="https://yygame-in.com/assets/hero.webp">
+  <meta property="og:title" content="yygame App (Official India) — Download yygame APK | yy game app Slot">
+  <meta property="og:description" content="Download the latest yygame APK — fast, secure, and optimized for India (UPI, low data usage, quick updates).">
+  <meta property="og:image" content="https://yygame-in.com/assets/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="yygame App (Official India)">
+  <meta name="twitter:description" content="Official yygame APK — secure, light, and optimized for India.">
+  <meta name="twitter:image" content="https://yygame-in.com/assets/og-image.jpg">
 
-  <!-- Brand / PWA -->
-  <meta name="theme-color" content="#b31c18"/>
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
-  <link rel="manifest" href="/site.webmanifest?v=1">
-
-  <!-- Perf -->
-  <link rel="preconnect" href="https://cdn.example.com" crossorigin>
-  <link rel="preload" as="image" href="assets/hero.webp"/>
+  <!-- Performance -->
+  <link rel="preload" as="image" href="/assets/screenshots/hero-shot.jpg"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
     :root{
-      --bg:#0b0a0e;--bg2:#120f16;--card:#171017;--muted:#cfc6c9;--text:#fff8fb;
-      --gold:#f6c453;--gold-2:#ffd98a;--border:#3b1a1f;--accent:#d33a32;
-      --radius:18px;--radius-lg:26px;--shadow:0 14px 36px rgba(0,0,0,.55),0 0 40px rgba(179,33,28,.18)
+      --bg:#0a0a0c; --bg2:#0d0d12; --card:#121217; --line:#2b2230;
+      --text:#f6f2ea; --muted:#c9c2b8;
+      --gold:#D4AF37; --gold2:#b99328; --red:#b10f2e; --red2:#7a0b20;
+      --ring: rgba(212,175,55,.35); --shadow:0 12px 30px rgba(0,0,0,.5);
+      --radius:20px; --max:1160px;
+      --news-shot-h-mobile: 320px;
     }
-    *{box-sizing:border-box}html,body{margin:0;padding:0;background:
-      radial-gradient(1200px 600px at 12% -8%, rgba(211,58,50,.16),transparent 60%),
-      radial-gradient(900px 500px at 92% 8%, rgba(246,196,83,.12),transparent 55%),
-      linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.65}
-    a{color:var(--gold);text-decoration:none}a:hover{color:var(--gold-2)}
-    .container{max-width:1200px;margin:0 auto;padding:22px}
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 100% -10%,#2b0e17 0%,transparent 55%),
+        radial-gradient(1200px 600px at -10% 110%,#2b2a13 0%,transparent 55%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.6;
+      scroll-behavior:smooth
+    }
+    a{color:inherit;text-decoration:none}
+    .max{max-width:var(--max);margin-inline:auto;padding:0 16px}
 
-    /* Header */
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-      background:linear-gradient(180deg,rgba(10,8,12,.8),rgba(10,8,12,.45));border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:36px;height:36px;border-radius:12px;border:1px solid rgba(246,196,83,.55)}
-    .brand b{font-size:18px;letter-spacing:.2px}
-    .menu{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;
-      border:1px solid var(--border);background:#140f15;color:var(--text);font-weight:700}
-    .btn.primary{background:linear-gradient(180deg,var(--gold-2),var(--gold));color:#2f1f08;border-color:#e0b04a}
-    .btn.ghost{background:transparent}
-    .menu-toggle{display:none}
+    /* Header + logo */
+    .site-header{
+      position:sticky;top:0;z-index:60;
+      background:rgba(10,10,12,.65);backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(212,175,55,.15)
+    }
+    .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+    .logo-slot{display:flex;align-items:center;gap:10px;background:transparent;border:none;box-shadow:none;padding:4px 6px;}
+    .logo-slot img{height:34px;width:auto;display:block}
+    .brand-text{
+      font-weight:900;letter-spacing:.5px;line-height:1;font-size:20px;
+      text-transform:uppercase;
+      background:linear-gradient(180deg,var(--gold),#fff1c4);
+      -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;
+    }
+    @media (max-width:420px){ .brand-text{font-size:18px} }
+    @media (max-width:340px){ .brand-text{display:none} }
+    .nav{display:flex;align-items:center;gap:12px}
+    #navToggle{display:none;background:#18161b;border:1px solid rgba(212,175,55,.25);border-radius:12px;color:#fff;padding:10px 12px;cursor:pointer}
+    #navMenu{display:flex;list-style:none;gap:8px;margin:0;padding:0}
+    #navMenu a{display:block;padding:10px 12px;border-radius:12px;background:#18161b;border:1px solid rgba(212,175,55,.2)}
+    #navMenu a:hover{outline:2px solid rgba(212,175,55,.25)}
+    .has-sub{position:relative}
+    .has-sub .submenu{
+      position:absolute;top:100%;left:0;margin-top:6px;list-style:none;
+      background:#151219;border:1px solid rgba(212,175,55,.25);border-radius:12px;
+      padding:8px;display:none;min-width:200px;box-shadow:var(--shadow)
+    }
+    .has-sub:hover .submenu{display:block}
+    @media(max-width:760px){
+      #navToggle{display:block}
+      #navMenu{
+        display:none;position:absolute;right:16px;top:58px;flex-direction:column;
+        background:#151219;border:1px solid rgba(212,175,55,.25);border-radius:14px;padding:12px
+      }
+      .nav.open #navMenu{display:flex}
+      .has-sub .submenu{position:static;display:block;background:transparent;border:none;box-shadow:none;padding:0}
+    }
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:14px 18px;border-radius:999px;border:1px solid rgba(212,175,55,.3);
+      box-shadow:var(--shadow);font-weight:800;cursor:pointer
+    }
+    .btn.primary{background:linear-gradient(180deg,var(--gold),var(--red));color:#2b0d11}
+    .btn.primary:hover{filter:brightness(1.07)}
+    .btn.ghost{background:#18161b;color:#f6f2ea}
+    .btn.xl{padding:16px 24px;font-size:18px}
+    .btn:focus-visible{outline:3px solid var(--ring)}
 
     /* Hero */
-    .hero{padding:38px 0 14px}
-    .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:center}
-    h1{font-size:clamp(30px,5.4vw,52px);line-height:1.08;margin:0 0 10px}
-    .lead{color:#ffe7ce;font-size:18px;margin:0 0 16px}
-    .badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
-    .badge{padding:6px 10px;border:1px solid rgba(246,196,83,.45);border-radius:999px;background:rgba(35,22,10,.55);color:var(--gold-2);font-size:13px}
-    .poster{border:1px solid #4a1719;border-radius:var(--radius-lg);aspect-ratio:4/3;display:grid;place-items:center;
-      background:radial-gradient(700px 320px at 20% -10%, rgba(211,58,50,.28),transparent 60%),radial-gradient(600px 300px at 80% 0%, rgba(246,196,83,.18),transparent 60%),#12080b;box-shadow:var(--shadow);overflow:hidden}
-    .poster img{max-width:92%;height:auto;border-radius:14px;filter:drop-shadow(0 20px 40px rgba(179,33,28,.45))}
+    .hero{padding:38px 0 10px;border-bottom:1px solid rgba(212,175,55,.15)}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px;align-items:center}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+    h1{font-size:clamp(28px,4.5vw,48px);line-height:1.1;margin:0 0 10px}
+    h1 .gold{color:var(--gold)} h1 .red{color:#ff4d5a}
+    .lead{color:var(--muted);max-width:65ch}
+    .trust{display:flex;gap:12px;flex-wrap:wrap;color:#f0dcc2;font-weight:700;margin:12px 0 0}
 
-    /* Sections */
-    .section{padding:28px 0}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .card{background:linear-gradient(180deg,#1b1117,rgba(27,17,23,.7));border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-    .card h3{margin:4px 0 8px;font-size:18px;color:var(--gold)}
-    .muted{color:var(--muted)}
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .step{background:linear-gradient(180deg,#1a1216,#130d12);border:1px dashed #4a2830;border-radius:14px;padding:16px}
-    .cta-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:18px;align-items:center;background:linear-gradient(180deg,#1b1215,rgba(27,17,23,.65));border:1px solid var(--border);border-radius:var(--radius-lg);padding:18px}
+    /* Screenshot helper (9:16) */
+    .shot{width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;display:block;object-position:center;}
 
-    footer{border-top:1px solid var(--border);margin-top:34px}
-    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);padding:18px 0}
-
-    @media (max-width:900px){
-      .container{padding:16px}
-      .menu-toggle{display:inline-flex;background:#151017;border:1px solid var(--border);color:var(--gold);padding:10px 12px;border-radius:12px}
-      .menu{display:none;position:absolute;right:16px;top:58px;flex-direction:column;background:#120c10;border:1px solid var(--border);border-radius:12px;padding:10px;min-width:220px;z-index:30}
-      .menu.open{display:flex}
-      .nav a.btn{width:100%;justify-content:center}
-      .hero-grid{grid-template-columns:1fr}
-      .grid,.steps{grid-template-columns:1fr}
+    /* Phone mock */
+    .mockup{display:grid;place-items:center}
+    .phone{
+      width:min(320px,86vw);aspect-ratio:9/16;background:#0d0a0f;border-radius:30px;
+      border:1px solid rgba(212,175,55,.25);box-shadow:0 20px 50px rgba(0,0,0,.6);
+      padding:10px;position:relative
     }
-    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .notch{
+      position:absolute;left:50%;transform:translateX(-50%);top:6px;width:40%;height:10px;
+      background:#1a151c;border-radius:0 0 12px 12px;border:1px solid rgba(212,175,55,.15)
+    }
+    .screen{width:100%;height:100%;border-radius:22px;overflow:hidden;background:#0a0a0c}
+    .screen-art{
+      width:100%;height:100%;
+      background:
+        radial-gradient(60% 40% at 50% 40%,rgba(212,175,55,.25) 0%,transparent 60%),
+        radial-gradient(60% 40% at 70% 70%,rgba(177,15,46,.25) 0%,transparent 60%),
+        linear-gradient(180deg,#100c10,#0b0a0d)
+    }
+
+    /* Sections / Cards */
+    .section{padding:26px 0;border-bottom:1px solid rgba(212,175,55,.12)}
+    .section h2{
+      font-size:clamp(22px,3.2vw,32px);margin:0 0 12px;
+      background:linear-gradient(180deg,#fff3cc,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media(max-width:960px){.grid3{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.grid3{grid-template-columns:1fr}}
+    .card{background:#151219;border:1px solid rgba(212,175,55,.18);border-radius:16px;padding:16px}
+    .two{display:grid;grid-template-columns:1fr .9fr;gap:12px}
+    @media(max-width:900px){.two{grid-template-columns:1fr}}
+    .steps{counter-reset:s;list-style:none;padding-left:0}
+    .steps li{
+      counter-increment:s;background:#151219;border:1px solid rgba(212,175,55,.18);
+      border-radius:14px;padding:12px;margin:8px 0;position:relative
+    }
+    .steps li::before{
+      content:counter(s);position:absolute;left:-10px;top:-10px;
+      background:linear-gradient(180deg,var(--gold),var(--red));color:#220a0d;
+      width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+      font-weight:900;border:2px solid #151219
+    }
+    .check{align-self:start}
+    .tick{list-style:none;padding-left:0}
+    .tick li{padding-left:20px;position:relative}
+    .tick li::before{
+      content:'✓';position:absolute;left:0;background:linear-gradient(180deg,var(--gold),var(--red));
+      -webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900
+    }
+
+    /* NEWS slider */
+    .slider-wrap{margin-top:12px}
+    .slider{position:relative;overflow:hidden;touch-action:pan-y;}
+    .slider::before,.slider::after{
+      content:"";position:absolute;top:0;bottom:0;width:48px;pointer-events:none;z-index:2;
+      background:linear-gradient(90deg, rgba(10,10,12,1) 0%, rgba(10,10,12,0) 100%);
+    }
+    .slider::before{left:0;}
+    .slider::after{right:0;transform:scaleX(-1)}
+    .slider-track{display:flex;gap:12px;transition:transform .35s ease;touch-action:pan-y;will-change:transform}
+    .slide{min-width:85%;max-width:85%;border-radius:16px;overflow:hidden;border:1px solid rgba(212,175,55,.2);background:#120d10}
+    @media(min-width:1024px){.slide{min-width:48%;max-width:48%}}
+    .slide .thumb{aspect-ratio:9/16;background:
+      radial-gradient(300px 160px at 20% 30%, rgba(212,175,55,.32) 0%, transparent 60%),
+      radial-gradient(300px 160px at 80% 70%, rgba(177,15,46,.32) 0%, transparent 60%);}
+    .slide .body{padding:12px}
+
+    @media (max-width:640px){
+      #news .slide{display:block}
+      #news .slide .shot{
+        width:100%;
+        height:var(--news-shot-h-mobile);
+        object-fit:cover; object-position:center; margin:0 auto; display:block;
+      }
+    }
+
+    .arrow{
+      position:absolute;top:50%;transform:translateY(-50%);
+      width:44px;height:44px;border-radius:999px;border:1px solid rgba(212,175,55,.35);
+      display:grid;place-items:center;z-index:3;cursor:pointer;
+      background:linear-gradient(180deg, rgba(212,175,55,.35), rgba(177,15,46,.35));
+      color:#2b0d11; backdrop-filter:blur(6px);
+      opacity:.68; transition:opacity .2s ease, transform .2s ease;
+    }
+    .arrow:hover{opacity:1; transform:translateY(-50%) scale(1.03)}
+    .arrow--prev{left:8px} .arrow--next{right:8px}
+    .arrow svg{width:18px;height:18px;display:block;filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+    .slider-nav{display:none}
+
+    /* Download bar */
+    .download{padding:22px 0;background:linear-gradient(180deg,#151219,#0b0a0d)}
+    .download .box{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      background:#151219;border:1px solid rgba(212,175,55,.25);border-radius:16px;padding:16px;box-shadow:var(--shadow)
+    }
+    @media(max-width:720px){.download .box{flex-direction:column;align-items:flex-start}}
+
+    /* Footer */
+    .site-footer{padding:24px 0;border-top:1px solid rgba(212,175,55,.12)}
+    .fgrid{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}
+    .fnav{display:flex;gap:10px;flex-wrap:wrap}
+    .copy{color:#e7dac0}
   </style>
 
-  <!-- Schema -->
+  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">{
-    "@context":"https://schema.org","@type":"WebSite",
-    "name":"yygame","url":"https://yygame-in.com/",
-    "potentialAction":{"@type":"SearchAction","target":"https://yygame-in.com/?q={search_term_string}","query-input":"required name=search_term_string"}
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "yygame",
+    "url": "https://yygame-in.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yygame-in.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }</script>
   <script type="application/ld+json">{
-    "@context":"https://schema.org","@type":"Organization",
+    "@context":"https://schema.org",
+    "@type":"Organization",
     "name":"yygame",
-    "alternateName":["YY Game","yy game","YY Game APK"],
+    "alternateName":["YY Game","yy game","YY Game APK","yygame APK"],
     "url":"https://yygame-in.com/",
     "logo":"https://yygame-in.com/assets/apple-touch-icon.png",
     "sameAs":[]
   }</script>
   <script type="application/ld+json">{
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"yygame",
+    "operatingSystem":"Android 8.0+",
+    "applicationCategory":"GameApplication",
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},
+    "downloadUrl":"https://yygame-in.com/download/yygame.apk"
+  }</script>
+  <script type="application/ld+json">{
     "@context":"https://schema.org","@type":"FAQPage","inLanguage":"en-IN",
     "mainEntity":[
-      {"@type":"Question","name":"Is yygame (YY Game) legal in India?","acceptedAnswer":{"@type":"Answer","text":"Laws vary by state. Real-money games may be restricted in some states. Check local regulations and play responsibly (18+)."}},
+      {"@type":"Question","name":"Is yygame legal in India?","acceptedAnswer":{"@type":"Answer","text":"Laws vary by state. Real-money games may be restricted in some states. Check local regulations and play responsibly (18+)."}},
       {"@type":"Question","name":"How do I deposit & withdraw in INR?","acceptedAnswer":{"@type":"Answer","text":"Use UPI/IMPS for instant INR deposits and fast withdrawals to Indian bank accounts."}},
       {"@type":"Question","name":"Is there a welcome bonus?","acceptedAnswer":{"@type":"Answer","text":"Promotions may be available periodically. Terms apply. 18+ only."}}
     ]
   }</script>
 </head>
 <body>
-  <a class="sr-only" href="#main">Skip to content</a>
-
-  <header aria-label="Main navigation">
-    <div class="container nav">
-      <div class="brand">
-        <img class="logo" src="assets/logo.webp" alt="yygame logo" width="36" height="36"/>
-        <b>yygame</b>
-      </div>
-      <button class="menu-toggle" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu">☰</button>
-      <nav id="site-menu" class="menu" aria-label="Primary">
-        <a class="btn primary" href="apk/">Download YY Game APK</a>
-        <a class="btn" href="how-to-download/">How to Install</a>
-        <a class="btn" href="app-info/">App Info</a>
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="bar max">
+      <a class="logo-slot" href="#top" aria-label="yygame home">
+        <picture>
+          <source srcset="/assets/logo-yygame.webp" type="image/webp">
+          <img src="/assets/logo-yygame.png" alt="yygame logo" width="160" height="160" decoding="async">
+        </picture>
+        <span class="brand-text">yygame</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <ul id="navMenu">
+          <li><a href="#news">News</a></li>
+          <li><a href="#guides">Guides</a></li>
+          <li><a href="#updates">Updates</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li class="has-sub">
+            <a href="#download">Download</a>
+            <ul class="submenu">
+              <li><a href="#download">yygame APK</a></li>
+              <li><a href="#how">How to Install</a></li>
+            </ul>
+          </li>
+          <li><a href="/privacy.html">Privacy</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid">
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="max hero-grid">
         <div>
-          <div class="badges"><span class="badge">Official • India</span><span class="badge">UPI ₹ Fast</span><span class="badge">Android APK</span></div>
-          <h1 id="hero-title">yygame (YY Game) — Official Site & APK Download</h1>
-          <p class="lead">Get the latest <strong>YY Game APK</strong>. UPI deposits, fast INR withdrawals, and popular high-RTP titles. 18+ only — play responsibly.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn primary" href="/apk/" aria-label="Go to YY Game APK page">⬇️ Download APK</a>
-            <a class="btn ghost" href="how-to-download/">Install Guide</a>
+          <h1>Download <span class="gold">yygame App</span> — Official <span class="red">yygame APK</span> for India</h1>
+          <p class="lead">Faster spins, lighter updates, and secure builds. The <strong>yy game app</strong> is tuned for Indian 4G/5G and entry-level chipsets.</p>
+          <div class="cta-row" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+            <a class="btn primary" href="/download/yygame.apk" id="dlTop" rel="nofollow">Download yygame APK</a>
+            <a class="btn ghost" href="#how">How to Install</a>
+          </div>
+          <ul class="trust"><li>✔ Signed APK</li><li>✔ Low data usage</li><li>✔ Android 8.0+</li></ul>
+        </div>
+        <div class="mockup" aria-label="yygame app preview">
+          <div class="phone"><div class="notch"></div><div class="screen">
+            <picture>
+              <source srcset="/assets/screenshots/hero-shot.webp" type="image/webp">
+              <img class="shot" src="/assets/screenshots/hero-shot.jpg" alt="yygame app screenshot" width="1080" height="1920" loading="eager" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+            </picture>
+            <div class="screen-art" style="display:none"></div>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="section" id="news">
+      <div class="max">
+        <h2>yygame News — Slot App in India</h2>
+        <p class="lead">Latest improvements for Indian networks and devices.</p>
+
+        <div class="slider-wrap">
+          <div class="slider" id="slider">
+            <button class="arrow arrow--prev" id="newsPrev" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M14.5 5l-7 7 7 7" stroke="#2b0d11" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="arrow arrow--next" id="newsNext" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M9.5 5l7 7-7 7" stroke="#2b0d11" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+
+            <div class="slider-track" id="newsTrack">
+              <article class="slide">
+                <picture>
+                  <source srcset="/assets/screenshots/news1.webp" type="image/webp">
+                  <img class="shot" src="/assets/screenshots/news1.jpg" alt="yygame update — Faster loads" width="720" height="1280" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block'">
+                </picture>
+                <div class="thumb" style="display:none"></div>
+                <div class="body"><h3>Update — Faster loads</h3><p>Asset compression & smarter caching reduce initial load time.</p></div>
+              </article>
+
+              <article class="slide">
+                <picture>
+                  <source srcset="/assets/screenshots/news2.webp" type="image/webp">
+                  <img class="shot" src="/assets/screenshots/news2.jpg" alt="yygame update — Data Saver" width="720" height="1280" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block'">
+                </picture>
+                <div class="thumb" style="display:none"></div>
+                <div class="body"><h3>Data Saver</h3><p>Lower bitrate assets on mobile data to keep spins smooth.</p></div>
+              </article>
+
+              <article class="slide">
+                <picture>
+                  <source srcset="/assets/screenshots/news3.webp" type="image/webp">
+                  <img class="shot" src="/assets/screenshots/news3.jpg" alt="yygame update — Stability" width="720" height="1280" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block'">
+                </picture>
+                <div class="thumb" style="display:none"></div>
+                <div class="body"><h3>Stability</h3><p>Improved FPS on entry-level Indian chipsets and older Androids.</p></div>
+              </article>
+
+              <article class="slide">
+                <picture>
+                  <source srcset="/assets/screenshots/news4.webp" type="image/webp">
+                  <img class="shot" src="/assets/screenshots/news4.jpg" alt="yygame update — Security" width="720" height="1280" loading="lazy" decoding="async" onerror="this.style.display='none'; this.parentElement.nextElementSibling.style.display='block'">
+                </picture>
+                <div class="thumb" style="display:none"></div>
+                <div class="body"><h3>Security</h3><p>Signed releases with checksum guidance for safe installs.</p></div>
+              </article>
+            </div>
           </div>
         </div>
-        <figure class="poster" aria-label="App preview">
-          <img src="assets/hero.webp" alt="yygame app interface preview" width="1200" height="900" loading="eager" fetchpriority="high" decoding="async"/>
-        </figure>
+
       </div>
     </section>
 
-    <section class="section">
-      <h2>Why players choose yygame (YY Game) in India</h2>
-      <div class="grid" style="margin-top:10px">
-        <article class="card"><h3>Optimized for Android</h3><p class="muted">Lightweight APK, smooth performance on mainstream devices, and clean UI.</p></article>
-        <article class="card"><h3>Payments that work</h3><p class="muted">Instant UPI/IMPS deposits and fast INR withdrawals to Indian bank accounts.</p></article>
-        <article class="card"><h3>Popular high-RTP titles</h3><p class="muted">Jackpots, bonus buys, and events curated for Indian players.</p></article>
+    <!-- GUIDES -->
+    <section class="section" id="guides">
+      <div class="max">
+        <h2>Guides — Install & Use the yy game app</h2>
+        <div class="grid3">
+          <article class="card">
+            <h3>How to install (Android 8+)</h3>
+            <ol class="steps">
+              <li>Tap <a href="/download/yygame.apk"><strong>Download yygame APK</strong></a>.</li>
+              <li>Open file → allow “Install unknown apps”.</li>
+              <li>Launch app → sign in and enable updates.</li>
+            </ol>
+          </article>
+          <article class="card"><h3>Bankroll basics</h3><p>Set bet size, session length, and cooldowns. Use in-app reminders; play responsibly.</p></article>
+          <article class="card"><h3>Data saver tips</h3><p>Enable Data Saver, prefer Wi-Fi for patches, keep ≥200 MB free space.</p></article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>How it works</h2>
-      <div class="steps">
-        <div class="step"><strong>1. Download</strong><br><span class="muted">Go to the APK page and get the official build.</span></div>
-        <div class="step"><strong>2. Install</strong><br><span class="muted">Allow “Install unknown apps”, open the file, and follow prompts.</span></div>
-        <div class="step"><strong>3. Play responsibly</strong><br><span class="muted">18+ only. Check local/state regulations in India.</span></div>
+    <!-- HOW -->
+    <section class="section" id="how">
+      <div class="max two">
+        <div class="card">
+          <h2>Install the <span class="gold">yygame</span> app in minutes</h2>
+          <p>Use the official link only. Package is signed & verified for India.</p>
+          <div class="cta-row"><a class="btn primary" href="/download/yygame.apk" rel="nofollow">Get APK Now</a></div>
+        </div>
+        <div class="card check">
+          <h3>Quick checks</h3>
+          <ul class="tick"><li>Android 8.0+ device</li><li>Free space ≥ 200 MB</li><li>Stable network (Wi-Fi preferred)</li></ul>
+        </div>
       </div>
     </section>
 
-    <section class="section cta-panel" aria-labelledby="cta-title">
-      <div>
-        <h2 id="cta-title">Ready to start with yygame?</h2>
-        <p class="muted">Visit the APK page for the latest build, then follow our step-by-step install guide.</p>
-      </div>
-      <div style="display:flex;gap:10px;align-items:center;justify-content:flex-end;flex-wrap:wrap">
-        <a class="btn primary" href="apk/">Download YY Game APK</a>
-        <a class="btn" href="how-to-download/">Read Install Guide</a>
+    <!-- UPDATES -->
+    <section class="section" id="updates">
+      <div class="max">
+        <h2>yygame App Updates & Changelog</h2>
+        <article class="card">
+          <h3>v1.2.5 — Current (Recommended)</h3>
+          <ul><li>APK size −14%</li><li>Reel FPS +20%</li><li>Stronger integrity checks</li></ul>
+          <a class="btn primary" href="/download/yygame.apk" rel="nofollow">Download yygame APK</a>
+        </article>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="faq-title">
-      <h2 id="faq-title">FAQ</h2>
-      <dl>
-        <dt>Is yygame legal in India?</dt><dd class="muted">Laws vary by state. Real-money games may be restricted. 18+ only.</dd>
-        <dt>Do you have a welcome bonus?</dt><dd class="muted">Promotions may be available from time to time. Terms apply.</dd>
-        <dt>Where do I get support?</dt><dd class="muted">Use the install guide or the app’s help section after installation.</dd>
-      </dl>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="max">
+        <h2>Frequently asked questions</h2>
+        <details class="faq"><summary>Is the yygame APK safe in India?</summary><p>Yes. This is the official signed package. Verify checksum before install.</p></details>
+        <details class="faq"><summary>Will updates remove my data?</summary><p>No. Install the new version over the current one; your data remains.</p></details>
+        <details class="faq"><summary>How to reduce data usage?</summary><p>Enable Data Saver, use Wi-Fi for patches, and close background apps.</p></details>
+      </div>
     </section>
 
-    <section class="section" aria-labelledby="policies-title">
-      <h2 id="policies-title" style="font-size:18px">Privacy & Terms</h2>
-      <p class="muted" style="margin:0">This official site shares information and download links for the YY Game app. Availability depends on local/state laws in India. 18+ only — play responsibly.</p>
+    <!-- DOWNLOAD -->
+    <section class="download" id="download" aria-label="Download yygame APK">
+      <div class="max box">
+        <div><h2>Download yygame APK (Official)</h2><p>Secure build, optimized for Indian devices and networks.</p></div>
+        <a class="btn xl primary" href="/download/yygame.apk" rel="nofollow">Download Now</a>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container foot">
-      <span>© <span id="y"></span> yygame. All rights reserved.</span>
-      <span class="muted"><a href="#policies-title">Privacy</a> · <a href="#policies-title">Terms</a></span>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="max fgrid">
+      <div class="fbrand">yygame</div>
+      <nav class="fnav">
+        <a href="#news">News</a><a href="#guides">Guides</a><a href="#updates">Updates</a><a href="#faq">FAQ</a><a href="/privacy.html">Privacy</a>
+      </nav>
+      <p class="copy">© <span id="year"></span> yygame — India.</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const btn=document.querySelector('.menu-toggle'),menu=document.getElementById('site-menu');
-    if(btn&&menu){btn.addEventListener('click',()=>{const open=menu.classList.toggle('open');btn.setAttribute('aria-expanded',open?'true':'false');});}
+    // Year
+    document.addEventListener('DOMContentLoaded',()=>{ const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear(); });
+
+    // Menu
+    (function(){
+      const nav=document.querySelector('.nav');
+      const btn=document.getElementById('navToggle');
+      if(!nav||!btn) return;
+      btn.addEventListener('click',()=>{ const open=nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+    }());
+
+    // UTM auto-append for top CTA
+    (function(){
+      const a=document.getElementById('dlTop'); if(!a) return;
+      if(!location.search.includes('utm_source')){
+        const u=new URL(a.href,location.href);
+        u.searchParams.set('utm_source','landing'); u.searchParams.set('utm_medium','cta'); u.searchParams.set('utm_campaign','in-slot');
+        a.href=u.toString();
+      }
+    }());
+
+    // Touch/drag slider
+    (function(){
+      const track = document.getElementById('newsTrack');
+      const slider = document.getElementById('slider');
+      if(!track || !slider) return;
+
+      const slides = [...track.children];
+      let i = 0, startX = 0, currX = 0, isDown = false, base = 0, width = 0;
+
+      function unit(){ return slides[0].getBoundingClientRect().width + 12; }
+      function clamp(v,min,max){ return Math.max(min, Math.min(v, max)); }
+      function go(idx, snap=true){
+        i = clamp(idx, 0, slides.length-1);
+        base = -i * unit();
+        if(snap){ track.style.transition = 'transform .35s ease'; }
+        track.style.transform = `translateX(${base}px)`;
+      }
+
+      function start(clientX){ isDown = true; startX = clientX; currX = clientX; width = unit(); track.style.transition = 'none'; }
+      function move(clientX){
+        if(!isDown) return;
+        currX = clientX;
+        const dx = currX - startX;
+        const maxLeft = 0, maxRight = -(slides.length-1)*width;
+        const pos = Math.max(maxRight-40, Math.min(base + dx, maxLeft+40));
+        track.style.transform = `translateX(${pos}px)`;
+      }
+      function end(){
+        if(!isDown) return;
+        const dx = currX - startX;
+        if (Math.abs(dx) > width*0.25) { go(i + (dx<0 ? 1 : -1)); } else { go(i); }
+        isDown = false;
+      }
+
+      slider.addEventListener('pointerdown', e=>{
+        if(e.pointerType!=='mouse' || e.buttons===1){ slider.setPointerCapture(e.pointerId); start(e.clientX); }
+      }, {passive:true});
+      slider.addEventListener('pointermove', e=>move(e.clientX), {passive:true});
+      slider.addEventListener('pointerup',   end, {passive:true});
+      slider.addEventListener('pointercancel', end, {passive:true});
+      slider.querySelectorAll('img').forEach(img=>img.draggable=false);
+
+      document.getElementById('newsPrev').addEventListener('click', ()=> go(i-1));
+      document.getElementById('newsNext').addEventListener('click', ()=> go(i+1));
+
+      function init(){ go(0,false); }
+      new ResizeObserver(init).observe(track);
+      init();
+    }());
   </script>
 </body>
 </html>
