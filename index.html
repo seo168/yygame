@@ -476,9 +476,8 @@
       if (!logo) return;
       logo.addEventListener('click', function (e) {
       e.preventDefault();               // cegah loncat anchor default
-      window.scrollTo(0, 0);     
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-   });
     // Menu
     (function(){
       const nav=document.querySelector('.nav');
