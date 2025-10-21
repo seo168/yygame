@@ -264,7 +264,7 @@
   <!-- Header -->
   <header class="site-header" id="top">
     <div class="bar max download-only">
-      <a class="logo-slot" href="#top" aria-label="yygame home">
+      <a class="logo-slot" id="logoLink" href="#top" aria-label="yygame home">
         <picture>
           <source srcset="/assets/logo-yygame.webp" type="image/webp">
           <img src="/assets/logo-yygame.png" alt="yygame logo" width="160" height="160" decoding="async">
@@ -470,33 +470,41 @@
 </footer>
 
   <script>
-    // Year
+  // Scroll ke atas ketika klik logo (halus)
     document.addEventListener('DOMContentLoaded', function () {
       const logo = document.getElementById('logoLink');
-      if (!logo) return;
-      logo.addEventListener('click', function (e) {
-      e.preventDefault();               // cegah loncat anchor default
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (logo) {
+        logo.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
     });
-    // Menu
+
+  // Menu
     (function(){
       const nav=document.querySelector('.nav');
       const btn=document.getElementById('navToggle');
       if(!nav||!btn) return;
-      btn.addEventListener('click',()=>{ const open=nav.classList.toggle('open'); btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+      btn.addEventListener('click',()=>{ 
+        const open=nav.classList.toggle('open'); 
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false'); 
+      });
     }());
 
-    // UTM auto-append for top CTA
+  // UTM auto-append untuk CTA atas
     (function(){
       const a=document.getElementById('dlTop'); if(!a) return;
       if(!location.search.includes('utm_source')){
         const u=new URL(a.href,location.href);
-        u.searchParams.set('utm_source','landing'); u.searchParams.set('utm_medium','cta'); u.searchParams.set('utm_campaign','in-slot');
+        u.searchParams.set('utm_source','landing'); 
+        u.searchParams.set('utm_medium','cta'); 
+        u.searchParams.set('utm_campaign','in-slot');
         a.href=u.toString();
       }
     }());
 
-    // Promotions slider (touch/drag + arrows)
+  // Slider promos (biarkan seperti semula)
     (function(){
       const track = document.getElementById('promoTrack');
       const slider = document.getElementById('slider');
@@ -538,8 +546,10 @@
       slider.addEventListener('pointercancel', end, {passive:true});
       slider.querySelectorAll('img').forEach(img=>img.draggable=false);
 
-      document.getElementById('promoPrev').addEventListener('click', ()=> go(i-1));
-      document.getElementById('promoNext').addEventListener('click', ()=> go(i+1));
+      const prev = document.getElementById('promoPrev');
+      const next = document.getElementById('promoNext');
+      if (prev) prev.addEventListener('click', ()=> go(i-1));
+      if (next) next.addEventListener('click', ()=> go(i+1));
 
       function init(){ go(0,false); }
       new ResizeObserver(init).observe(track);
