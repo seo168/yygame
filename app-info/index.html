@@ -8,114 +8,543 @@
   <meta name="description" content="Official app info for yygame (India): version, size, welcome bonus, and direct APK download link. UPI ₹ deposits, fast withdrawals. Mobile-first. 18+ only."/>
   <meta name="robots" content="index,follow"/>
 
-  <!-- Canonical ke URL tanpa .html -->
   <link rel="canonical" href="https://yygame-in.com/app-info/"/>
 
-  <!-- (hapus alt lama ke GitHub Pages) -->
-
-  <!-- Open Graph / Twitter -->
   <meta property="og:site_name" content="yygame" />
   <meta property="og:title" content="YYGAME App Info (India)"/>
-  <meta name="description" content="yygame (YY Game) app details for India: version, APK size, Android requirements, and features. Download the official YY Game APK safely.">
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://yygame-in.com/app-info/"/>
   <meta property="og:image" content="https://yygame-in.com/assets/hero.webp"/>
   <meta name="twitter:card" content="summary_large_image"/>
 
-  <!-- Favicons -->
   <meta name="theme-color" content="#b31c18" />
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=4" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest?v=6">
 
-  <!-- Preload aset penting -->
   <link rel="preload" as="image" href="/assets/hero.webp"/>
   <link rel="preload" as="image" href="/assets/logo.webp"/>
 
   <style>
-    :root{ --bg:#100608; --card:#1a0e10; --muted:#d8c9c3; --text:#fff7f2; --gold:#f4c15d; --gold-3:#c6932a; --border:#4a1b20; }
+    :root{
+      --bg:#100608;
+      --card:#1a0e10;
+      --muted:#d8c9c3;
+      --text:#fff7f2;
+      --gold:#f4c15d;
+      --gold-3:#c6932a;
+      --border:#4a1b20;
+    }
+
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:linear-gradient(180deg,#100608 0%,#1a0e10 100%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
-    a{color:var(--gold);text-decoration:none} a:hover{opacity:.9}
-    img{max-width:100%;height:auto;display:block}
-    .container{max-width:1120px;margin:0 auto;padding:24px}
 
-    header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:rgba(26,14,16,.85);border-bottom:1px solid var(--border)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
-    .brand .logo{width:32px;height:32px;border-radius:10px;object-fit:cover;border:1px solid var(--gold-3);box-shadow:0 0 30px rgba(244,193,93,.25)}
-    .nav a.btn{padding:10px 16px;border:1px solid var(--border);border-radius:10px;background:transparent;color:var(--text)}
-    .nav a.btn.primary{background:linear-gradient(180deg,var(--gold),#e9b23a);border-color:var(--gold-3);color:#3a2200;font-weight:700}
-    .nav a.btn.primary:hover{filter:brightness(.98)}
-
-    .hamb{display:inline-flex;align-items:center;justify-content:center;width:42px;height:38px;border:1px solid var(--border);border-radius:10px;background:#1a0e10;color:var(--text);cursor:pointer}
-    .hamb span{display:block;width:18px;height:2px;background:var(--text);border-radius:2px;position:relative}
-    .hamb span::before,.hamb span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--text);border-radius:2px}
-    .hamb span::before{top:-6px}.hamb span::after{top:6px}
-
-    .menu{display:none;position:absolute;top:64px;right:24px;left:24px;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px;gap:8px;flex-direction:column}
-    .menu .btn{width:100%}
-    .menu.open{display:flex}
-    @media (min-width:900px){
-      .menu{display:flex !important;position:static;flex-direction:row;background:transparent;border:0;padding:0;gap:10px}
-      .menu .btn{width:auto}
-      .hamb{display:none}
+    html,body{
+      margin:0;
+      padding:0;
+      background:
+        radial-gradient(circle at top left, rgba(244,193,93,.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(179,28,24,.2), transparent 36%),
+        linear-gradient(180deg,#100608 0%,#1a0e10 100%);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      line-height:1.6;
     }
 
-    .section{padding-block:28px}
-    h1{font-size:clamp(24px,4.5vw,32px);margin:14px 0}
-    h2{margin:8px 0 6px}
-    .muted{color:var(--muted)}
-    .card{background:linear-gradient(180deg,#1a0e10,rgba(26,14,16,.6));border:1px solid var(--border);border-radius:16px;padding:18px}
+    a{
+      color:var(--gold);
+      text-decoration:none;
+    }
 
-    .table-wrap{overflow-x:auto;margin-top:8px}
-    .app-table{width:100%;border-collapse:separate;border-spacing:0 12px;table-layout:fixed}
-    .app-table col{width:50%}
-    .app-table thead th,.app-table tbody td{text-align:center;vertical-align:middle;padding:12px 14px;border:1px solid var(--border);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
-    .app-table thead th{background:rgba(255,247,242,.06);color:var(--muted);font-weight:800}
-    .app-table tbody td{background:#1a0e10}
-    .app-table tbody td:first-child{border-top-left-radius:12px;border-bottom-left-radius:12px}
-    .app-table tbody td:last-child{border-top-right-radius:12px;border-bottom-right-radius:12px}
-    .app-table .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:#230f13;color:var(--text);font-weight:700;text-decoration:none}
-    .app-table .btn.primary{background:linear-gradient(180deg,var(--gold),#e9b23a);border-color:var(--gold-3);color:#3a2200}
-    .app-table .btn.full{width:100%;box-sizing:border-box;justify-content:center;padding:12px 14px;white-space:nowrap}
+    a:hover{
+      opacity:.92;
+    }
 
-    /* Watermark dekoratif di belakang judul */
-    .hero-head{position:relative;overflow:hidden}
+    img{
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    .container{
+      max-width:1120px;
+      margin:0 auto;
+      padding:24px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter:blur(14px);
+      background:rgba(26,14,16,.88);
+      border-bottom:1px solid rgba(244,193,93,.16);
+      box-shadow:0 10px 28px rgba(0,0,0,.28);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.3px;
+    }
+
+    .brand .logo{
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      object-fit:cover;
+      border:1px solid var(--gold-3);
+      box-shadow:0 0 30px rgba(244,193,93,.32);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 16px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:rgba(35,15,19,.75);
+      color:var(--text);
+      font-weight:700;
+      transition:all .22s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      border-color:rgba(244,193,93,.5);
+      box-shadow:0 10px 26px rgba(0,0,0,.22);
+    }
+
+    .btn.primary{
+      background:linear-gradient(180deg,var(--gold),#e9b23a);
+      border-color:var(--gold-3);
+      color:#3a2200;
+      font-weight:800;
+    }
+    
+    .section{
+      padding-block:26px;
+    }
+
+    h1{
+      font-size:clamp(26px,4.8vw,42px);
+      line-height:1.12;
+      margin:14px 0;
+      letter-spacing:-.6px;
+    }
+
+    h2{
+      margin:8px 0 10px;
+      font-size:clamp(20px,3vw,26px);
+    }
+
+    .muted{
+      color:var(--muted);
+    }
+
+    .card{
+      position:relative;
+      background:
+        linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)),
+        linear-gradient(180deg,#1a0e10,rgba(26,14,16,.72));
+      border:1px solid rgba(244,193,93,.16);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:
+        0 18px 45px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.05);
+      overflow:hidden;
+    }
+
+    .hero-head{
+      position:relative;
+      overflow:hidden;
+      padding-top:36px;
+      padding-bottom:20px;
+    }
+
     .hero-head::before{
-      content:"";position:absolute;inset:0;
-      background: no-repeat right center / min(520px,45vw) url("/assets/app-info-bg.webp");
-      opacity:.18;pointer-events:none;z-index:0
+      content:"";
+      position:absolute;
+      inset:0;
+      background:no-repeat right center / min(520px,45vw) url("/assets/app-info-bg.webp");
+      opacity:.22;
+      pointer-events:none;
+      z-index:0;
     }
-    .hero-head>*{position:relative;z-index:1}
+
+    .hero-head>*{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+    }
+
+    .business-btn{
+      position:relative;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      max-width:460px;
+      padding:18px 28px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#f4c15d,#ff7a18,#f4c15d);
+      background-size:220% 220%;
+      color:#2b1600 !important;
+      font-size:17px;
+      font-weight:1000;
+      letter-spacing:.35px;
+      text-align:center;
+      line-height:1.35;
+      border:1px solid rgba(255,255,255,.28);
+      box-shadow:
+        0 0 18px rgba(244,193,93,.6),
+        0 0 42px rgba(255,122,24,.28),
+        0 18px 35px rgba(0,0,0,.32);
+      animation:
+        businessGlow 2s ease-in-out infinite,
+        businessMove 3s linear infinite,
+        businessFloat 2.6s ease-in-out infinite;
+      overflow:hidden;
+      transition:all .25s ease;
+    }
+
+    .business-btn::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:-80%;
+      width:60%;
+      height:100%;
+      background:linear-gradient(120deg,transparent,rgba(255,255,255,.72),transparent);
+      transform:skewX(-25deg);
+      animation:businessShine 2.5s infinite;
+    }
+
+    .business-btn::after{
+      content:"";
+      position:absolute;
+      inset:4px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.28);
+      pointer-events:none;
+    }
+
+    .business-btn:hover{
+      transform:translateY(-4px) scale(1.04);
+    }
+
+    .hero-buttons{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+
+.secondary-agent-btn{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:460px;
+  padding:18px 28px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#f4c15d,#ff7a18,#f4c15d);
+  background-size:220% 220%;
+  color:#2b1600 !important;
+  font-size:17px;
+  font-weight:1000;
+  letter-spacing:.35px;
+  text-align:center;
+  line-height:1.35;
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:
+    0 0 18px rgba(244,193,93,.6),
+    0 0 42px rgba(255,122,24,.28),
+    0 18px 35px rgba(0,0,0,.32);
+  animation:
+    businessGlow 2s ease-in-out infinite,
+    businessMove 3s linear infinite,
+    businessFloat 2.6s ease-in-out infinite;
+  overflow:hidden;
+  transition:all .25s ease;
+}
+
+.secondary-agent-btn::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-80%;
+  width:60%;
+  height:100%;
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.72),
+    transparent
+  );
+  transform:skewX(-25deg);
+  animation:businessShine 2.5s infinite;
+}
+
+.secondary-agent-btn::after{
+  content:"";
+  position:absolute;
+  inset:4px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);
+  pointer-events:none;
+}
+
+.secondary-agent-btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:
+    0 0 28px rgba(255,170,0,.65),
+    0 0 60px rgba(255,140,0,.35),
+    0 18px 38px rgba(0,0,0,.32);
+}
+
+@keyframes secondGlow{
+  0%,100%{
+    box-shadow:
+      0 0 18px rgba(255,170,0,.4),
+      0 0 42px rgba(255,140,0,.22),
+      0 14px 30px rgba(0,0,0,.28);
+  }
+
+  50%{
+    box-shadow:
+      0 0 30px rgba(255,190,0,.8),
+      0 0 70px rgba(255,140,0,.45),
+      0 18px 38px rgba(0,0,0,.32);
+  }
+}
+
+@keyframes secondMove{
+  0%{
+    background-position:0% 50%;
+  }
+
+  100%{
+    background-position:220% 50%;
+  }
+}
+
+@keyframes secondShine{
+  0%{
+    left:-80%;
+  }
+
+  60%{
+    left:130%;
+  }
+
+  100%{
+    left:130%;
+  }
+}
+
+@media (max-width:768px){
+
+  .hero-buttons{
+    gap:12px;
+  }
+
+  .secondary-agent-btn{
+    max-width:100%;
+    padding:14px 16px;
+    border-radius:16px;
+    font-size:14px;
+  }
+
+}
+
+    @keyframes businessGlow{
+      0%,100%{
+        box-shadow:
+          0 0 18px rgba(244,193,93,.6),
+          0 0 42px rgba(255,122,24,.28),
+          0 18px 35px rgba(0,0,0,.32);
+      }
+
+      50%{
+        box-shadow:
+          0 0 30px rgba(244,193,93,.95),
+          0 0 72px rgba(255,122,24,.5),
+          0 18px 35px rgba(0,0,0,.32);
+      }
+    }
+
+    @keyframes businessMove{
+      0%{background-position:0% 50%}
+      100%{background-position:220% 50%}
+    }
+
+    @keyframes businessShine{
+      0%{left:-80%}
+      60%{left:130%}
+      100%{left:130%}
+    }
+
+    @keyframes businessFloat{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-4px)}
+    }
+
+    .app-details-list{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .detail-item{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:15px 16px;
+      border:1px solid rgba(244,193,93,.16);
+      border-radius:16px;
+      background:rgba(35,15,19,.72);
+      box-shadow:0 8px 20px rgba(0,0,0,.16);
+    }
+
+    .detail-item span{
+      color:var(--muted);
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .detail-item strong{
+      color:var(--text);
+      font-size:15px;
+      text-align:right;
+    }
+
+    .download-main-btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      margin-top:4px;
+      padding:16px 18px;
+      border-radius:16px;
+      background:linear-gradient(180deg,var(--gold),#e9b23a);
+      border:1px solid var(--gold-3);
+      color:#3a2200 !important;
+      font-size:16px;
+      font-weight:900;
+      text-decoration:none;
+      box-shadow:0 12px 28px rgba(244,193,93,.22);
+      transition:all .22s ease;
+    }
+
+    .download-main-btn:hover{
+      transform:translateY(-2px);
+      box-shadow:0 16px 34px rgba(244,193,93,.32);
+    }
+
+    ul.muted li{
+      margin-bottom:8px;
+    }
+
+    footer{
+      border-top:1px solid rgba(244,193,93,.16);
+      margin-top:40px;
+      background:rgba(16,6,8,.35);
+    }
+
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      padding-block:22px;
+    }
+
     @media (max-width:900px){
-      .hero-head::before{background-position:center right 10px;background-size:min(400px,70vw);opacity:.35}
+      .hero-head::before{
+        background-position:center right 10px;
+        background-size:min(400px,70vw);
+        opacity:.32;
+      }
     }
 
-    footer{border-top:1px solid var(--border);margin-top:40px}
-    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);padding-block:22px}
+    @media (max-width:768px){
+      .container{
+        padding:18px;
+      }
+
+      .section{
+        padding-block:22px;
+      }
+
+      .card{
+        border-radius:20px;
+        padding:18px;
+      }
+
+      .business-btn{
+        width:100%;
+        max-width:100%;
+        padding:16px 18px;
+        font-size:15px;
+        border-radius:20px;
+      }
+
+      .detail-item{
+        padding:14px;
+        border-radius:14px;
+      }
+
+      .foot{
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width:480px){
+      h1{
+        font-size:26px;
+      }
+
+      h2{
+        font-size:21px;
+      }
+
+      .business-btn{
+        font-size:14px;
+        padding:15px 14px;
+        line-height:1.45;
+      }
+
+      .detail-item span{
+        font-size:13px;
+      }
+
+      .detail-item strong{
+        font-size:14px;
+      }
+
+      .download-main-btn{
+        padding:15px 16px;
+        font-size:15px;
+      }
+    }
   </style>
-
-  <!-- JSON-LD: MobileApplication -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org","@type":"MobileApplication",
-    "name":"yygame","operatingSystem":"Android","applicationCategory":"GameApplication","inLanguage":"en-IN",
-    "softwareVersion":"1.0.4",
-    "downloadUrl":"https://dclaa7imbttae.cloudfront.net/apk/yy.tpnja.apk",
-    "publisher":{"@type":"Organization","name":"YYGAME"},
-    "offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}
-  }</script>
-
-  <!-- JSON-LD: Breadcrumbs (pakai domain kamu) -->
-  <script type="application/ld+json">{
-    "@context":"https://schema.org","@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://yygame-in.com/"},
-      {"@type":"ListItem","position":2,"name":"App Info","item":"https://yygame-in.com/app-info/"}
-    ]
-  }</script>
 </head>
+
 <body>
   <header aria-label="Main navigation">
     <div class="container nav">
@@ -123,83 +552,128 @@
         <img class="logo" src="/assets/logo.webp" alt="yygame logo" width="32" height="32" />
         <span>yygame</span>
       </div>
-      <button class="hamb" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu"><span></span></button>
-      <nav id="site-menu" class="menu" aria-label="Primary">
-        <a class="btn" href="/">Home</a>
-        <a class="btn" href="/how-to-download/">How to Download</a>
-      </nav>
     </div>
   </header>
 
   <main class="container" id="main">
+
     <section class="section hero-head">
       <h1>yygame — App Information (India)</h1>
-      <p class="muted">Quick details about the yygame Android app for Indian players. UPI ₹ deposits, fast withdrawals, free spins & daily promos. 18+ only — play responsibly.</p>
+      <p class="muted">
+        Quick details about the yygame Android app for Indian players.
+        UPI ₹ deposits, fast withdrawals, free spins & daily promos.
+        18+ only — play responsibly.
+      </p>
     </section>
+
+    <section class="section" style="padding-top:0">
+  <div class="hero-buttons">
+
+    <a
+      class="business-btn"
+      href="/become-agent/"
+    >
+      🚀 Become Agent
+    </a>
+
+    <a
+      class="secondary-agent-btn"
+      href="/alliance/"
+    >
+      🎯 View All Partner Platforms
+    </a>
+
+  </div>
+</section>
 
     <section class="card section" aria-labelledby="app-details">
       <h2 id="app-details">App details</h2>
-      <div class="table-wrap">
-        <table class="app-table" role="table" aria-describedby="app-details">
-          <colgroup><col><col></colgroup>
-          <thead><tr><th>Info</th><th>Details</th></tr></thead>
-          <tbody>
-            <tr><td><strong>Name</strong></td><td>yygame</td></tr>
-            <tr><td><strong>Version</strong></td><td>1.0.4</td></tr>
-            <tr><td><strong>Size</strong></td><td>~20&nbsp;MB</td></tr>
-            <tr><td><strong>Welcome Bonus</strong></td><td>₹500</td></tr>
-            <tr>
-              <td><strong>App Link</strong></td>
-              <td>
-                <a class="btn primary full" href="https://dclaa7imbttae.cloudfront.net/apk/yy.tpnja.apk" aria-label="Download yygame">
-                  Download
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+
+      <div class="app-details-list">
+        <div class="detail-item">
+          <span>Name</span>
+          <strong>yygame</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Version</span>
+          <strong>1.0.4</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Size</span>
+          <strong>~20 MB</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Welcome Bonus</span>
+          <strong>₹500</strong>
+        </div>
+
+        <a
+          class="download-main-btn"
+          href="https://dclaa7imbttae.cloudfront.net/apk/yy.tpnja.apk"
+          aria-label="Download yygame"
+        >
+          Download
+        </a>
       </div>
 
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;justify-content:flex-end">
-        <a class="btn" href="/how-to-download/">Can't install?</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;justify-content:center">
+        <a class="btn" href="https://yy.games/chatRoomNew.html?metadata=%7B%22comment%22:%22774303678902702004%22%7D&entid=d9b3bd12538784d88382296cd03c374a">Can't install?</a>
       </div>
     </section>
 
     <section class="card section" aria-labelledby="notes">
       <h2 id="notes">Notes</h2>
+
       <ul class="muted" style="margin:0;padding-left:18px">
         <li>Enable “Install unknown apps” on Android if prompted.</li>
         <li>Bonus availability depends on terms and local/state laws in India.</li>
-        <li>Mobile-first UI for smoother play on most Android devices. See the <a href="/how-to-download/">How to Download guide</a>.</li>
+        <li>
+          Mobile-first UI for smoother play on most Android devices.
+          See the <a href="/how-to-download/">How to Download guide</a>.
+        </li>
       </ul>
+    </section>
+
+    <section class="card section" aria-labelledby="business">
+      <h2 id="business">Business Partnership</h2>
+
+      <p class="muted" style="margin:0">
+        Interested in growing together with yygame?
+        We are open for long-term business partnerships,
+        marketing collaborations, and agent cooperation.
+        Contact us anytime for more details and partnership opportunities.
+      </p>
     </section>
 
     <section class="card section" aria-labelledby="disclaimer">
       <h2 id="disclaimer">Disclaimer</h2>
+
       <p class="muted" style="margin:0">
-        yygame-in.com is only for sharing direct download/referral links for yy.game and other gaming apk. This app is owned by YYGAME, contact them if you have any questions or queries.
-        We do not own the app nor claim copyright for images and logos. This website is just for APK download.
+        yygame-in.com is only for sharing direct download/referral links
+        for yy.game and other gaming apk.
+        This app is owned by YYGAME, contact them if you have any questions or queries.
+        We do not own the app nor claim copyright for images and logos.
+        This website is just for APK download.
       </p>
     </section>
+
   </main>
 
   <footer>
     <div class="container foot">
       <span>© <span id="y"></span> yygame. All rights reserved.</span>
-      <span class="muted"><a href="/#privacy">Privacy Policy</a> · <a href="/#terms">Terms</a></span>
+      <span class="muted">
+        <a href="/#privacy">Privacy Policy</a> ·
+        <a href="/#terms">Terms</a>
+      </span>
     </div>
   </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const hamb = document.querySelector('.hamb');
-    const menu = document.getElementById('site-menu');
-    if (hamb && menu){
-      hamb.addEventListener('click', () => {
-        const open = menu.classList.toggle('open');
-        hamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-  </script>
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
